@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="uspostalcodesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="counties">
+    <Key>
+      <PropertyRef Name="county_id" />
+    </Key>
+    <Property Name="county_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="county_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="state_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="places">
+    <Key>
+      <PropertyRef Name="place_id" />
+    </Key>
+    <Property Name="place_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="place_name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="postal_code" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="latitude" Type="decimal" Precision="12" Scale="4" Nullable="false" />
+    <Property Name="longitude" Type="decimal" Precision="12" Scale="4" Nullable="false" />
+    <Property Name="county_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="states">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="state_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="state_abbr" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <Association Name="fk01_counties">
+    <End Role="states" Type="Self.states" Multiplicity="1" />
+    <End Role="counties" Type="Self.counties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="states">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="counties">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk01_places">
+    <End Role="counties" Type="Self.counties" Multiplicity="1" />
+    <End Role="places" Type="Self.places" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="counties">
+        <PropertyRef Name="county_id" />
+      </Principal>
+      <Dependent Role="places">
+        <PropertyRef Name="county_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="uspostalcodesModelStoreContainer">
+    <EntitySet Name="counties" EntityType="Self.counties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="places" EntityType="Self.places" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="states" EntityType="Self.states" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk01_counties" Association="Self.fk01_counties">
+      <End Role="states" EntitySet="states" />
+      <End Role="counties" EntitySet="counties" />
+    </AssociationSet>
+    <AssociationSet Name="fk01_places" Association="Self.fk01_places">
+      <End Role="counties" EntitySet="counties" />
+      <End Role="places" EntitySet="places" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

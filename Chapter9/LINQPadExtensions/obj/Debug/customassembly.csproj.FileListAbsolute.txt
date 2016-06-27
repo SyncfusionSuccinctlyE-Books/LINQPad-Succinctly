@@ -1,0 +1,5 @@
+C:\LINQPad_Succinctly\customassembly\bin\Debug\customassembly.dll
+C:\LINQPad_Succinctly\customassembly\bin\Debug\customassembly.pdb
+C:\LINQPad_Succinctly\customassembly\obj\Debug\customassembly.dll
+C:\LINQPad_Succinctly\customassembly\obj\Debug\customassembly.pdb
+C:\LINQPad_Succinctly\customassembly\bin\Debug\LINQPad.exe

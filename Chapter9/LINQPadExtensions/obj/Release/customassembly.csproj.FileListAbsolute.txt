@@ -1,0 +1,6 @@
+C:\LINQPad_Succinctly\customassembly\bin\Release\customassembly.dll
+C:\LINQPad_Succinctly\customassembly\bin\Release\customassembly.pdb
+C:\LINQPad_Succinctly\customassembly\obj\Release\customassembly.dll
+C:\LINQPad_Succinctly\customassembly\obj\Release\customassembly.pdb
+C:\LINQPad_Succinctly\customassembly\bin\Release\LINQPad.exe
+C:\LINQPad_Succinctly\customassembly\obj\Release\customassembly.csprojResolveAssemblyReference.cache

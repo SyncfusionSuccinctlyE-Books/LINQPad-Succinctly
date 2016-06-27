@@ -1,0 +1,8 @@
+C:\LINQPad_Succinctly\uspostalcodes\bin\Debug\uspostalcodes.dll.config
+C:\LINQPad_Succinctly\uspostalcodes\bin\Debug\uspostalcodes.dll
+C:\LINQPad_Succinctly\uspostalcodes\bin\Debug\uspostalcodes.pdb
+C:\LINQPad_Succinctly\uspostalcodes\bin\Debug\EntityFramework.dll
+C:\LINQPad_Succinctly\uspostalcodes\bin\Debug\EntityFramework.xml
+C:\LINQPad_Succinctly\uspostalcodes\obj\Debug\uspostalcodes.csprojResolveAssemblyReference.cache
+C:\LINQPad_Succinctly\uspostalcodes\obj\Debug\uspostalcodes.dll
+C:\LINQPad_Succinctly\uspostalcodes\obj\Debug\uspostalcodes.pdb
