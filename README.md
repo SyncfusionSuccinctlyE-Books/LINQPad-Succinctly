@@ -1,6 +1,6 @@
 # LINQPad Succinctly
 
-This is the companion repo for [*Go Succinctly*](https://www.syncfusion.com/resources/techportal/details/ebooks/LINQPad_Succinctly) by Mark Lewin. Published by Syncfusion.
+This is the companion repo for [*LINQPad Succinctly*](https://www.syncfusion.com/resources/techportal/details/ebooks/LINQPad_Succinctly) by Mark Lewin. Published by Syncfusion.
 
 [![cover](https://github.com/SyncfusionSuccinctlyE-Books/LINQPad-Succinctly/blob/master/cover.png)](https://www.syncfusion.com/resources/techportal/details/ebooks/LINQPad_Succinctly)
 
